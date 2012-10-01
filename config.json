@@ -1,0 +1,11 @@
+{
+    "name": "PrintTaskCards",
+    "className": "CustomApp",
+    "sdk": "1.29",
+    "javascript": [
+        "PrintTaskCards.js"
+    ],
+    "css": [
+        "PrintTaskCards.css"
+    ]
+}
