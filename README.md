@@ -1,7 +1,7 @@
 Print Task Cards
 ==============
 
-![SCREENSHOT](https://raw.github.com/osulehria/PrintTaskCards/master/deploy/screenshot.png)
+![SCREENSHOT](https://raw.github.com/RallyApps/PrintTaskCards/master/deploy/screenshot.png)
 
 ## Overview
 
@@ -13,7 +13,7 @@ This Rally app shows all the tasks for a given iteration in a print friendly car
 
 If you want to start using the app immediately, create an Custom HTML app on your Rally dashboard. Then copy App.html from the deploy folder into the HTML text area. That's it, it should be ready to use.
 
-Or you can just click [here](https://raw.github.com/osulehria/PrintTaskCards/master/deploy/App.html) to find the file and copy it into the custom HTML app.
+Or you can just click [here](https://raw.github.com/RallyApps/PrintTaskCards/master/deploy/App.html) to find the file and copy it into the custom HTML app.
 
 ### Using the App
 
@@ -39,4 +39,4 @@ Available Rakefile tasks are:
 
 ## License
 
-PrintTaskCards is released under the MIT license.  See the file [LICENSE](https://raw.github.com/osulehria/PrintTaskCards/master/LICENSE) for the full text.
+PrintTaskCards is released under the MIT license.  See the file [LICENSE](https://raw.github.com/RallyApps/PrintTaskCards/master/LICENSE) for the full text.
