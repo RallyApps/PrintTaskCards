@@ -8,7 +8,7 @@
   <meta name="Vendor" content="Rally Software" />
 
   <script type="text/javascript">
-    var MAX_NAME_LEN = 115;
+    var MAX_NAME_LEN = 100;
     var APP_TYPE = "Task";
     var CARD_TYPE = "tasks";
   </script>
@@ -107,7 +107,7 @@
                             '<span class="estimate">' + estimate + '</span>' +
                             '</div>';
             
-                if ((cardNum + 1) % 2 === 0) {
+                if ((cardNum + 1) % 4 === 0) {
                     theMarkup = theMarkup + '<div class=pb></div>';
                 } else if (cardNum === totalCards - 1) {
                     theMarkup = theMarkup + '<div class=cb>&nbsp;</div>';
@@ -214,116 +214,115 @@
     rally.addOnLoad(onLoad);
   </script>
 
-  <!-- <link rel="stylesheet" type="text/css" href="./Print Task Cards_files/EJSChart.css" media="screen,print"> -->
-    <style type="text/css" title="printCards">
-      /* PLEASE LEAVE THIS STYLESHEET INLINE SINCE TITLE IS NECESSARY */
-      @media print {
-          #interface {
-              display: none;
-          }
+  <style type="text/css" title="printCards">
+    /* PLEASE LEAVE THIS STYLESHEET INLINE SINCE TITLE IS NECESSARY */
+    @media print {
+        #interface {
+            display: none;
+        }
 
-          .pb {
-              page-break-after: always;
-              clear: both;
-          }
-      }
+        .pb {
+            page-break-after: always;
+            clear: both;
+        }
+    }
 
-      #buttonDiv,
-      #iterationDropdown {
-          display: inline;
-      }
+    #buttonDiv,
+    #iterationDropdown {
+        display: inline;
+    }
 
-      #interface, #printSection {
-          margin: 20px;
-      }
+    #interface, #printSection {
+        margin: 20px;
+    }
 
-      html {
-          background-color: #fff;
-          color: #000;
-          font: 14pt / 1.26 Arial, Helvetica, sans-serif;
-          margin: 0;
-          padding: 0;
-      }
+    html {
+        background-color: #fff;
+        color: #000;
+        font: 14pt / 1.26 Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
-      body {
-          background-color: #fff;
-          margin: 0;
-          padding: 0;
-      }
+    body {
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+    }
 
-      .cb {
-          clear: both;
-      }
+    .cb {
+        clear: both;
+    }
 
-      .artifact {
-          background-color: #fff;
-          border: 2px solid #000;
-          float: left;
-          height: 3.2in;
-          margin: 0.1in 0.1in 0.1in 0.1in;
-          position: relative;
-          overflow: hidden;
-          width: 4.3in;
-      }
+    .artifact {
+        background-color: #fff;
+        border: 2px solid #000;
+        float: left;
+        height: 3.2in;
+        margin: 0.1in 0.1in 0.1in 0.1in;
+        position: relative;
+        overflow: hidden;
+        width: 4.3in;
+    }
 
-      .header {
-          border: 1px;
-          border-bottom-style: solid;
-          display: table-cell;
-          font-size: 18px;
-          height: 40px;
-          vertical-align: middle;
-          width: 4.3in;
-      }
+    .header {
+        border: 1px;
+        border-bottom-style: solid;
+        display: table-cell;
+        font-size: 18px;
+        height: 40px;
+        vertical-align: middle;
+        width: 4.3in;
+    }
 
-      .card-title {
-          font: bold 28px Genova, sans-serif;
-          padding-top: 0.5em;
-          text-align: center;
-      }
+    .card-title {
+        font: bold 28px Genova, sans-serif;
+        padding-top: 0.5em;
+        text-align: center;
+    }
 
-      .description {
-          float: left;
-          font: 12pt Georgia, sans-serif;
-          margin: 0.25em auto 0 auto;
-          padding-left: 1.0em;
-          padding-right: 1.0em;
-          overflow-y: hidden;
-          width: 100%;
-          word-wrap: break-word;
-      }
+    .description {
+        float: left;
+        font: 12pt Georgia, sans-serif;
+        margin: 0.25em auto 0 auto;
+        padding-left: 1.0em;
+        padding-right: 1.0em;
+        overflow-y: hidden;
+        width: 100%;
+        word-wrap: break-word;
+    }
 
-      .owner {
-          float: right;
-          height: 40px;
-      }
+    .owner {
+        float: right;
+        height: 40px;
+    }
 
-      .ownerText {
-          float: right;
-          font: 14pt / 1.26 Arial, Helvetica, sans-serif;
-          margin-right: 0.3em;
-          margin-top: 0.3em;
-      }
+    .ownerText {
+        float: right;
+        font: 14pt / 1.26 Arial, Helvetica, sans-serif;
+        margin-right: 0.3em;
+        margin-top: 0.3em;
+    }
 
-      .storyID {
-          float: left;
-          font: 14pt / 1.26 Arial, Helvetica, sans-serif;
-          margin-left: 0.25em;
-          margin-top: 0.3em;
-      }
+    .storyID {
+        float: left;
+        font: 14pt / 1.26 Arial, Helvetica, sans-serif;
+        margin-left: 0.25em;
+        margin-top: 0.3em;
+    }
 
-      .estimate {
-          bottom: 0.5em;
-          position: absolute;
-          right: 0.5em;
-      }
+    .estimate {
+        bottom: 0.5em;
+        position: absolute;
+        right: 0.5em;
+    }
 
-      .content {
-          height: 2.4in;
-          overflow: hidden;
-          width: 4.3in;
-      }
-    </style>
+    .content {
+        height: 2.4in;
+        overflow: hidden;
+        width: 4.3in;
+    }
+  </style>
 </head>
 <body>
 <div style="float:right" id="help"></div>

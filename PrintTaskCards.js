@@ -90,7 +90,7 @@ function PrintTaskCards(rallyDataSource) {
                 '<span class="estimate">' + estimate + '</span>' +
                 '</div>';
 
-    if ((cardNum + 1) % 2 === 0) {
+    if ((cardNum + 1) % 4 === 0) {
         theMarkup = theMarkup + '<div class=pb></div>';
     } else if (cardNum === totalCards - 1) {
         theMarkup = theMarkup + '<div class=cb>&nbsp;</div>';
