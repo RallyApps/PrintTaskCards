@@ -66,8 +66,9 @@ function PrintTaskCards(rallyDataSource) {
         }
 	}
 
-	function createMarkup(cardNum, totalCards, name, ownerText, ownerClass, description, storyId, taskId, estimate) {
+	function createMarkup(cardIndex, totalCards, name, ownerText, ownerClass, description, storyId, taskId, estimate) {
         var theMarkup, id;
+        var currentCardNumber = cardIndex + 1;
         if (CARD_TYPE === 'stories') {
             id = storyId;
         } else {
@@ -87,10 +88,8 @@ function PrintTaskCards(rallyDataSource) {
                     '<span class="estimate">' + estimate + '</span>' +
                     '</div>';
 
-        if ((cardNum + 1) % 4 === 0) {
+        if (currentCardNumber !== totalCards && currentCardNumber % 4 === 0) {
             theMarkup = theMarkup + '<div class=pb></div>';
-        } else if (cardNum === totalCards - 1) {
-            theMarkup = theMarkup + '<div class=cb>&nbsp;</div>';
         }
 
         return theMarkup;
