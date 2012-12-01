@@ -1,7 +1,7 @@
 Print Task Cards
 ==============
 
-![SCREENSHOT](https://raw.github.com/RallyApps/PrintTaskCards/master/deploy/screenshot.png)
+![SCREENSHOT](https://raw.github.com/RallyApps/PrintTaskCards/master/screenshots/title-screenshot.png)
 
 ## Overview
 
